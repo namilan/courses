@@ -6,14 +6,24 @@ import org.junit.Test;
 
 public class CourseRepositoryTest {
 	
-	private long id = 1L;
-	private Course course = new Course(id, "course name", "course description");
+	private long firstCourseId = 1L;
+	private Course FirstCourse = new Course(firstCourseId, "course name", "course description");
+	
+	private long secondCourseId = 2L;
+	private Course secondCourse = new Course(secondCourseId, "course name", "course description");
 	
 	@Test
 	public void shouldFindACourse() {
-		CourseRepository underTest = new CourseRepository(course);
-		Course result = underTest.findOne(id);
-		assertThat(result, is(course));		
+		CourseRepository underTest = new CourseRepository(FirstCourse);
+		Course result = underTest.findOne(firstCourseId);
+		assertThat(result, is(FirstCourse));		
+	}
+	
+	@Test
+	public void ShouldFindASecondCourse() {
+		CourseRepository underTest = new CourseRepository(secondCourse);
+		Course result = underTest.findOne(secondCourseId);
+		assertThat(result, is(secondCourse));
 	}
 
 }

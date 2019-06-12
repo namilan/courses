@@ -2,15 +2,15 @@ package org.wecancodeit.courses;
 
 public class Course {
 
-	private long courseId;
+	private long id;
 
-	public Course(long courseId, String string, String string2) {
-		this.courseId = courseId;
+	public Course(long id, String string, String string2) {
+		this.id = id;
 	}
 
 	public Long getId() {
 		// TODO Auto-generated method stub
-		return courseId;
+		return id;
 	}
 
 }
