@@ -1,5 +1,6 @@
 package org.wecancodeit.courses;
 
+import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -11,12 +12,18 @@ public class CourseRepository {
 	
 	private Map<Long, Course> courseList = new HashMap<>();
 	
-	public CourseRepository(Course course) {
+	public CourseRepository(Course...courses) {
+		for(Course course: courses) {
 		courseList.put(course.getId(), course);
-		
-	};
+		}
+	}
 
 	public Course findOne(long id) {
 		return courseList.get(id);
+	}
+
+	public Collection<Course> findAll() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 }
