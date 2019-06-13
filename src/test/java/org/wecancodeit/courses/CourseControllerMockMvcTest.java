@@ -50,7 +50,7 @@ public class CourseControllerMockMvcTest {
 	@Test
 	public void shouldPutAllCoursesIntoModel() throws Exception{
 		Collection<Course>allCourses = asList(firstCourse, secondCourse);
-		when(repository.findAll()).thenReturn(allCourses));
+		when(repository.findAll()).thenReturn(allCourses);
 		mvc.perform(get("/show-courses")).andExpect(model().attribute("courses", is(allCourses)));
 	}
 
