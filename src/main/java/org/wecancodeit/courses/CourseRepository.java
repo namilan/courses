@@ -23,7 +23,6 @@ public class CourseRepository {
 	}
 
 	public Collection<Course> findAll() {
-		// TODO Auto-generated method stub
-		return null;
+		return courseList.values();
 	}
 }
